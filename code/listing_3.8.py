@@ -1,0 +1,1 @@
+include::{sourcedir}/Chapter3/keras_embedding_labeled_tsne_load_existing.function_load_embedding[]

@@ -1,0 +1,14 @@
+def convert_examples_to_features(tokenizer, examples, max_seq_length=256):
+    input_ids, input_masks, segment_ids, labels = [], [], [], []
+    for example in examples:
+      input_id, input_mask, segment_id, label = convert_single_example(tokenizer, example, max_seq_length) 
+      input_ids.append(input_id) 
+      input_masks.append(input_mask)
+      segment_ids.append(segment_id)
+      labels.append(label)
+    return (
+        np.array(input_ids),
+        np.array(input_masks),
+        np.array(segment_ids),
+        np.array(labels).reshape(-1, 1)
+    ) 
