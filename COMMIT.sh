@@ -1,4 +1,4 @@
-git remote add origin git@github.com:stephanraaijmakers/ma-ml4nlp.git
+git remote add origin git@github.com:stephanraaijmakers/deeplearningfornlp.git
 git branch -M main
 git add .
 git commit -am "Update"
