@@ -1,6 +1,5 @@
 def createLabelDictOneFile(path):
-    files = [join(path,filename) for filename in listdir(path) if isfile(
-    *********************************join(path, filename))]
+    files = [join(path,filename) for filename in listdir(path) if isfile(join(path, filename))]
     labelDict={}
 
     for file in files:
