@@ -1,10 +1,8 @@
 def create_model(trainingData, testData, context):
     tokenizer,vocab_size=create_tokenizer(trainingData,testData)
 
-    X_tr,Q_tr,y_tr,max_story_len_tr, max_query_len_tr=process_stories_n_context(trainingData,tokenizer,
-vocab_size,use_context=context)
-    X_te,Q_te,y_te, max_story_len_te, max_query_len_te=process_stories_n_context(testData,tokenizer,
-vocab_size,use_context=context)
+    X_tr,Q_tr,y_tr,max_story_len_tr, max_query_len_tr=process_stories_n_context(trainingData,tokenizer,vocab_size,use_context=context)
+    X_te,Q_te,y_te, max_story_len_te, max_query_len_te=process_stories_n_context(testData,tokenizer,vocab_size,use_context=context)
 
     max_story_len=max(max_story_len_tr, max_story_len_te)
     max_query_len=max(max_query_len_tr, max_query_len_te)
@@ -46,8 +44,7 @@ vocab_size,use_context=context)
         input_C=Dense(size)(input_C)
         O = add([Probs, input_C])
 
-        input_question_match = dot([input_A,
-question_B], axes=(2, 2))
+        input_question_match = dot([input_A,question_B], axes=(2, 2))
 
         input_question_match = add([input_question_match,O])
         Probs = Activation('softmax')(input_question_match)
@@ -59,7 +56,7 @@ question_B], axes=(2, 2))
     weights = Dense(size, activation='softmax')(final_match)
     merged=merge([final_match, weights], mode='mul')
     answer=Flatten()(merged)
-    answer=Dropout(0.3)(answer) # ADDED 25.03
+    answer=Dropout(0.3)(answer) 
     answer = Dense(vocab_size)(answer)  # (samples, vocab_size)
     answer = Activation('softmax')(answer)
     model = Model([input_facts, question], answer)

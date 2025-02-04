@@ -92,7 +92,7 @@ output = Dense(1, activation='sigmoid')(dot_product)
 model = Model(input=[input_target, input_context], output=output)
 model.compile(loss='binary_crossentropy', optimizer='adam',metrics=['acc'])
 
-print model.summary()
+print(model.summary())
 
 epochs=int(sys.argv[2])
 

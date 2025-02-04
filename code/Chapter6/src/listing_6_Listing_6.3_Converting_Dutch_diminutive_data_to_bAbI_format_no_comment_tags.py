@@ -18,6 +18,6 @@ def babify_dimin(fname):
             elif feature=='}':
                 feature="rbr"
             fA.append(feature)
-        print "1 %s."%(' '.join(fA))
-        print "2 suffix %s? \t%s\t%s"%(fA[-1],label,"1")
+        print("1 %s."%(' '.join(fA)))
+        print("2 suffix %s? \t%s\t%s"%(fA[-1],label,"1"))
      f.close()

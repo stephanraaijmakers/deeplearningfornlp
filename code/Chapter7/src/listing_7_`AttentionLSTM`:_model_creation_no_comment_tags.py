@@ -1,5 +1,4 @@
-def createModel(attention_flag=False, return_sequences=False, timesteps=1,
-input_dim=1, maxlen=64, num_classes=1):
+def createModel(attention_flag=False, return_sequences=False, timesteps=1,input_dim=1, maxlen=64, num_classes=1):
     maxwords= 1000
     maxlen=100
     vlen=maxlen

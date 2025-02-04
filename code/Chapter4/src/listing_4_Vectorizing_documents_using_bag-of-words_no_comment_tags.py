@@ -13,8 +13,7 @@ def vectorizeDocumentsBOW(path, labelDict, nb_words_per_segment):
             print('Skipping filename:%s'%(file))
             continue
 
-        (segmented_document,wordDict)=segmentDocumentWords(join(path,file),
-        nb_words_per_segment) 
+        (segmented_document,wordDict)=segmentDocumentWords(join(path,file),nb_words_per_segment) 
 
         globalDict=mergeDictionaries(globalDict,wordDict) 
 
@@ -33,9 +32,7 @@ def vectorizeDocumentsBOW(path, labelDict, nb_words_per_segment):
 
     for segment in segments:
         segment=' '.join(segment)
-        X.append(pad_sequences([hashing_trick(
-        segment, round(vocab_len*1.3))],
-        nb_words_per_segment)[0]) 
+        X.append(pad_sequences([hashing_trick(segment, round(vocab_len*1.3))], nb_words_per_segment)[0]) 
 
     y=np_utils.to_categorical(labels, nb_classes)
 

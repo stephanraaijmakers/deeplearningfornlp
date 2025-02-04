@@ -15,14 +15,10 @@ for (topic1,topic2) in Stored:
         ClassLexicon[topic3]=ClassLexicon[topic4]=1
 
 
-        indices_train1=[i for i in range(len(y_train)) if
-        y_train[i] in [topic1,topic2]] 
-        indices_test1=[i for i in range(len(y_test)) if
-        y_test[i] in [topic1,topic2]]
-        indices_train2=[i for i in range(len(y_train)) if
-        y_train[i] in [topic3,topic4]]
-        indices_test2=[i for i in range(len(y_test)) if
-        y_test[i] in [topic3,topic4]]
+        indices_train1=[i for i in range(len(y_train)) if y_train[i] in [topic1,topic2]] 
+        indices_test1=[i for i in range(len(y_test)) if cy_test[i] in [topic1,topic2]]
+        indices_train2=[i for i in range(len(y_train)) if y_train[i] in [topic3,topic4]]
+        indices_test2=[i for i in range(len(y_test)) if y_test[i] in [topic3,topic4]]
 
         x1_train=np.array([x_train[i] for i in indices_train1])
         y1_train=np.array([processLabel(y_train[i]) for i in indices_train1])

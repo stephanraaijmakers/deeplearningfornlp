@@ -42,7 +42,7 @@ def babify_conll02(fname):
                             ambig_pos=lex_pos
                     elif i==ngramsize-1:
                         fact+=" %s."%(lex_pos)
-                        print fact
+                        print(fact)
                     else:
                         fact+=" %s"%(lex_pos)
                     i+=1
@@ -50,11 +50,9 @@ def babify_conll02(fname):
                     n+=1
                     ambig=False
                     if n>2:
-                        print "%d pos %s? \t%s\t%d %d"%(n,ambig_pos,
-unique_pos,n-2,n-1)
+                        print("%d pos %s? \t%s\t%d %d"%(n,ambig_pos,unique_pos,n-2,n-1))
                     else:
-                        print "%d pos %s? \t%s\t%d"%(n,ambig_pos,
-unique_pos,n-1)
+                        print("%d pos %s? \t%s\t%d"%(n,ambig_pos, unique_pos,n-1))
                     n=0
 
                 n+=1

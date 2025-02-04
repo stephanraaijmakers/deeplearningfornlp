@@ -8,7 +8,7 @@ model.add(Dense(nb_classes, activation='sigmoid'))
 model.compile(loss='categorical_crossentropy', optimizer='adam',
 metrics=['acc'])
 
-print model.summary()
+print(model.summary())
 
 nb_epochs=10
 

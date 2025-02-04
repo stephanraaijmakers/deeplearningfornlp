@@ -12,7 +12,7 @@ cv = CountVectorizer(analyzer = "word",   \
 
 docvec=cv.fit_transform(trainingdata["text"]).toarray() 
 
-print docvec 
+print(docvec)
 
-print cv.vocabulary_ 
+print(cv.vocabulary_)
 

@@ -120,7 +120,7 @@ model = Model(input=[input_w1, input_w2, input_w3, input_docid],
 output=output)
 model.compile(loss='sparse_categorical_crossentropy', optimizer='adam',metrics=['acc'])
 
-print model.summary()
+print(model.summary())
 
 epochs=int(sys.argv[2])
 
