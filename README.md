@@ -7,6 +7,10 @@ You will find the code snippets in the subfolder snippets, and the runnable code
 The data files used in the book have not been put in this repo, a.o. due to potential copyright restrictions.
 Please refer to the book for the description and location of these files.
 
+Additionalk information: 
+
+* The Dutch Diminutive data can be found at https://github.com/LanguageMachines/timbl/tree/master/demos.
+
 ## Disclaimer
 Keep in mind that this code is mainly for instruction purposes. Due to the progression of Python libraries and frameworks, certain code might need adaptation to recent versions of these resources.
 
